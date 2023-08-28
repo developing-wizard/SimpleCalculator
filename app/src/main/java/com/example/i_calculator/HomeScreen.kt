@@ -4,6 +4,8 @@ package com.example.i_calculator
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.view.Window
@@ -33,6 +35,7 @@ class HomeScreen : AppCompatActivity() {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)
         dialog.setContentView(R.layout.exit_alert)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         val yesBtn = dialog.findViewById(R.id.btn_ok) as Button
         val noBtn = dialog.findViewById(R.id.btn_cancel) as Button
         yesBtn.setOnClickListener {
